@@ -25,7 +25,6 @@ MY ORIGINAL AI PROMPT:
 Example: "I'm learning Python basics in a high school programming class. 
 I have some experience with Java. Can you create 6-7 practice problems that cover..."
 """
-
 # =============================================================================
 # PART 2: AI-GENERATED PROBLEMS & SOLUTIONS
 # =============================================================================
@@ -42,44 +41,7 @@ Example inputs/outputs:
 - is_even(4) should return True
 - is_even(7) should return False
 """
-# Function Syntax Quiz
 
-score = 0
-
-# Question 1
-answer1 = input("1️⃣ Fill in the blank to define a function:\n___ greet():\n    print('Hi')\nYour answer: ")
-if answer1.strip().lower() == "def":
-    print("✅ Correct!")
-    score += 1
-else:
-    print("❌ Nope! The correct answer is 'def'.")
-
-# Question 2
-answer2 = input("\n2️⃣ What symbol starts the function body?\nYour answer: ")
-if answer2.strip() == ":":
-    print("✅ Correct!")
-    score += 1
-else:
-    print("❌ It's ':' (colon).")
-
-# Question 3
-answer3 = input("\n3️⃣ What keyword is used to send back a value from a function?\nYour answer: ")
-if answer3.strip().lower() == "return":
-    print("✅ Nailed it!")
-    score += 1
-else:
-    print("❌ It's 'return'.")
-
-# Question 4
-answer4 = input("\n4️⃣ What’s wrong with this function?\n   def say_hi(name)\n       print('Hi ' + name)\nYour answer: ")
-if "colon" in answer4.lower() or ":" in answer4:
-    print("✅ Yep! It's missing a colon after the function declaration.")
-    score += 1
-else:
-    print("❌ It's missing a colon ':' after say_hi(name).")
-
-# Final Score
-print(f"\n🎉 You scored {score}/4!")
 
 
 
