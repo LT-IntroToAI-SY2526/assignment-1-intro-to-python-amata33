@@ -29,6 +29,8 @@ def absolute(n: int) -> int:
     """
     if n < 0:
         return n * -1
+    else:
+        return n
 
 
 
@@ -44,9 +46,9 @@ def factorial(n: int) -> int:
         factorial of the passed in number
     """
     result = 1
-    for num in range(1, n):
+    for num in range(1, n + 1):
         result = result * num # result *= num
-    print(result)
+    # print(result)
     return result     
 
 
@@ -88,7 +90,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
-    raise NotImplementedError("sum_list")
+    numtortn = 0
+    for index in range(len(lst)):
+        numtortn += lst[index]
+    return numtortn 
 
 
 def mean(lst: List[int]) -> float:
@@ -145,7 +150,7 @@ if __name__ == "__main__":
     assert absolute(-1) == 1, "absolute of -1 failed"
     assert factorial(4) == 24, "factorial of 4 failed"
     assert every_other([1, 2, 3, 4, 5]) == [ 1, 3, 5], "every_other of [1,2,3,4,5] failed"
-     assert every_other([12, 23, 35, 48, 53, 63]) == [12, 35, 53], "every_other of [1,2,3,4,5] failed"
+    assert every_other([12, 23, 35, 48, 53, 63]) == [12, 35, 53], "every_other of [1,2,3,4,5] failed"
     assert sum_list([1, 2, 3]) == 6, "sum_list of [1,2,3] failed"
     assert mean([1, 2, 3, 4, 5]) == 3, "mean of [1,2,3,4,5] failed"
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
