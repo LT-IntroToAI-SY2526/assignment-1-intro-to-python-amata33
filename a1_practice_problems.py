@@ -90,9 +90,10 @@ def sum_list(lst: List[int]) -> int:
     Returns:
         the sum of the passed in list
     """
+    # return sum(lst) (built in function)
     numtortn = 0
-    for index in range(len(lst)):
-        numtortn += lst[index]
+    for element in lst: 
+        numtortn += element 
     return numtortn 
 
 
@@ -100,12 +101,12 @@ def mean(lst: List[int]) -> float:
     """Takes a list of numbers, and returns the mean of the numbers.
 
     Args:
-        lst - a list of numbers
+        lst - a list of number
 
     Returns:
         the mean of the passed in list
     """
-    raise NotImplementedError("mean")
+    return sum(lst) / len(lst)
 
 
 def median(lst: List[int]) -> float:
@@ -120,7 +121,10 @@ def median(lst: List[int]) -> float:
     Returns:
         the median of the passed in list
     """
-    raise NotImplementedError("median")
+    if len(lst) % 2 == 0:
+        return lst(len(lst) / 2)
+    else:
+        return lst(len(lst) / 2) / lst((len(lst) / 2) + 1)
 
 
 def duck_duck_goose(lst: List[str]) -> List[str]:
@@ -156,5 +160,5 @@ if __name__ == "__main__":
     assert median([1, 2, 3, 4, 5]) == 3, "median of [1,2,3,4,5] failed"
     names = ["roscoe", "kim", "woz", "solin", "law", "remess"]
     assert duck_duck_goose(names) == ["roscoe", "law"]
-
+    assert sum_list([4, 7, 20, 23, 7]), "sum list of [4, 7, 20, 23, 7] failed"
     print("All tests passed!")
