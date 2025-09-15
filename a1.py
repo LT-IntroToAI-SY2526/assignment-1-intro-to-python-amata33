@@ -35,7 +35,7 @@ I have some experience with Java. Can you create 6-7 practice problems that cove
 # Write a function that takes a name and age, then returns a formatted string
 # Java equivalent would use String concatenation or String.format()
 def introduce_yourself(name, age):
-    whattoReturn = "hello, I'm " + name + "and I'm " + age + " years old":
+    whattoReturn = "hello, I'm " + name + "and I'm " + age + " years old"
     """
     Return a string like "Hello, I'm Alice and I'm 25 years old"
     Notice: No explicit type declarations needed!
