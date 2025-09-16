@@ -48,11 +48,14 @@ def introduce_yourself(name, age):
 
 
 # Problem 2: Lists vs Arrays
-# Create a function that finds the second largest number in a list
+# Create a function that finds e second largest number in a list
 # Notice how Python lists are more flexible than Java arrays
 def second_largest(numbers):
-    del max(numbers) # max() removes the largest number of a number array
+     # max() removes the largest number of a number array
+    number = numbers.max()
+    numbers.remove(number)
     return max(numbers)
+
     """
     Find the second largest number in a list
     Example: [1, 3, 4, 2] -> 3
@@ -126,27 +129,34 @@ def is_palindrome(text):
 # Problem 6: Working with Functions as First-Class Objects
 # Create a simple calculator that uses functions
 def calculator(operation, x, y):
-    """
-    Perform calculation based on operation string
-    Operations: "add", "subtract", "multiply", "divide"
-    Example: calculator("add", 5, 3) -> 8
     
-    This shows how Python treats functions as first-class objects
-    """
-    # TODO: Implement this function
-    # Hint: You can store functions in a dictionary!
+    #Perform calculation based on operation string
+    #Operations: "add", "subtract", "multiply", "divide"
+    #Example: calculator("add", 5, 3) -> 8
+    string = operation.lower()
+    if string == "add":
+        return x + y
+    elif string == "subtract":
+        return x - y
+    elif string == "multiply":
+        return x * y
+    elif string == "divide":
+        return x / y
+    
     pass
-"""
-PROBLEM 1: [Problem Title/Description]
-[Copy the complete problem description from your AI assistant]
-Example:
-Problem: Write a function called 'is_even' that takes an integer and returns 
-True if the number is even, False if it's odd.
 
-Example inputs/outputs:
-- is_even(4) should return True
-- is_even(7) should return False
+
+#PROBLEM 1: [Problem Title/Description]
+#[Copy the complete problem description from your AI assistant]
+#Example:
+#Problem: Write a function called 'is_even' that takes an integer and returns 
+#True if the number is even, False if it's odd.
+
+#Example inputs/outputs:
+#- is_even(4) should return True
+#- is_even(7) should return False
 """
+
 
 
 
@@ -165,23 +175,24 @@ Example inputs/outputs:
 
 
 """
-Test all your solutions with different inputs
+#Test all your solutions with different inputs
 
-Add asserts if you feel comfortable
+#Add asserts if you feel comfortable
 
-Example:
+#xample:
+#print("Testing Problem 1:")
+#print(f"is_even(4): {is_even(4)}")  # Should print True
+#print(f"is_even(7): {is_even(7)}")  # Should print False
+""""""
+
 print("Testing Problem 1:")
-print(f"is_even(4): {is_even(4)}")  # Should print True
-print(f"is_even(7): {is_even(7)}")  # Should print False
-"""
+introduce_yourself("Mata", 41)
 
-print("Testing Problem 1:")
+array = [4, 5, 7, 4, 8, 6]
+print("\nTesting Problem 2:" + squares_of_evens(array))
 # Add your tests here
 
-print("\nTesting Problem 2:")
-# Add your tests here
-
-print("\nTesting Problem 3:")
+print("\nTesting Problem 3:" + is_palindrome("racecar"))
 # Add your tests here
 
 print("\nTesting Problem 4:")
