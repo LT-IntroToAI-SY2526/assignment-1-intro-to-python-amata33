@@ -51,7 +51,8 @@ def introduce_yourself(name, age):
 # Create a function that finds the second largest number in a list
 # Notice how Python lists are more flexible than Java arrays
 def second_largest(numbers):
-    
+    del max(numbers) # max() removes the largest number of a number array
+    return max(numbers)
     """
     Find the second largest number in a list
     Example: [1, 3, 4, 2] -> 3
@@ -67,22 +68,6 @@ def second_largest(numbers):
 # print(second_largest([1]))           # Edge case
 
 
-# Problem 3: Dictionary Usage (like HashMap in Java)
-# Count the frequency of each character in a string
-def char_frequency(text):
-    """
-    Count frequency of each character in a string
-    Return a dictionary where keys are characters, values are counts
-    Example: "hello" -> {'h': 1, 'e': 1, 'l': 2, 'o': 1}
-    """
-    # TODO: Implement using a dictionary
-    # Hint: Use dict.get() method or collections.defaultdict
-    pass
-
-# Test your function
-# print(char_frequency("hello"))
-
-
 # Problem 4: List Comprehensions (Python's powerful feature)
 # Create a function that returns squares of even numbers from a list
 def squares_of_evens(numbers):
@@ -94,6 +79,13 @@ def squares_of_evens(numbers):
     1. Using a traditional for loop
     2. Using a list comprehension (Python's concise way)
     """
+    dametuamor = []
+    for element in numbers:
+        if numbers[element] % 2 == 0:
+            dametuamor.add(numbers[element] * numbers[element])
+    
+    return dametuamor 
+
     # Traditional approach:
     # TODO: Implement with for loop
     
@@ -119,6 +111,10 @@ def is_palindrome(text):
     # - Use string.lower() method
     # - Use string.replace() to remove spaces
     # - Python string slicing: text[::-1] reverses a string
+    if text[::-1].equals(text):
+        return True
+    else:
+        return False
     pass
 
 # Test cases
